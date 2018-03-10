@@ -17,6 +17,6 @@
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     apt-get install fonts-powerline
     autoload -U zsh-newuser-install
-    
+    ln -s /etc/zsh/zshrc
     
     
