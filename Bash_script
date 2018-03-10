@@ -18,5 +18,7 @@
     apt-get install fonts-powerline
     autoload -U zsh-newuser-install
     ln -s /etc/zsh/zshrc
+    chsh -s /usr/bin/zsh $USER
+    
     
     
