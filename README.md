@@ -10,3 +10,6 @@ This will help you organise your Linux Debian server with
 
 more is on the way
 
+
+# Install:
+sh -c "$(wget https://raw.githubusercontent.com/MrHpower/debian/master/Bash_script.sh -O -)"
