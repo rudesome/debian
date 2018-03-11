@@ -23,7 +23,7 @@
     wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
     cd /etc/zsh
     rm -rf .dir_colors
-    wget -O dir_colors https://github.com/MrHpower/debian/blob/master/.dir_colors
+    wget -O .dir_colors https://github.com/MrHpower/debian/blob/master/.dir_colors
     cd /etc/zsh/.oh-my-zsh/themes/
     wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
     cd ~
