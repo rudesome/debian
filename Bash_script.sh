@@ -13,9 +13,13 @@
     apt-get autoremove -y
     apt-get autoclean
     # Install ZSH
+    apt-get install zsh-common -y
+    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    cp -R /root/.oh-my-zsh /etc/zsh/
     apt-get install git -y
     apt-get install fonts-powerline
     #config ZSH
+    mkdir -p /etc/zsh/.oh-my-zsh/the
     cd /etc/zsh
     mv zshrc zshrc.backup
     wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
@@ -47,6 +51,3 @@
     sudo mv sudoers sudoers.backup
     sudo wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
     sudo chmod 440 sudoers
-    apt-get install zsh-common -y
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-    cp -R /root/.oh-my-zsh /etc/zsh/
