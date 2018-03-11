@@ -11,7 +11,7 @@
     apt-get update
     apt full-upgrade -y
     # Install ZSH
-    apt-get install zsh
+    apt-get install zsh-common 
     apt-get install git
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     apt-get install fonts-powerline
