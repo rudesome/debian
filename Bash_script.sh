@@ -46,6 +46,6 @@
     # install SUDO
     apt-get install sudo -y
     cd /etc
-    sudo mv sudoers sudoers.backup
-    sudo wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
-    sudo chmod 440 sudoers
+    mv sudoers sudoers.backup
+    wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
+    chmod 440 sudoers
