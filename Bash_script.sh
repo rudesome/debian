@@ -10,6 +10,8 @@
     sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     apt-get update
     apt full-upgrade -y
+    apt-get autoremve
+    apt-get autoclean
     # Install ZSH
     apt-get install zsh-common -y
     apt-get install git -y
