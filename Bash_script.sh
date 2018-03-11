@@ -2,12 +2,13 @@
     #
     # Made by H Power
     #
-    # up-date and grade your current Debian system
+    # up- date/grade your current Debian system
     apt-get update
     apt full-upgrade -y
     #
     # set version to stretch and install
     sed -i 's/jessie/stretch/g' /etc/apt/sources.list
+    apt-get update
     apt full-upgrade -y
     # Install ZSH
     apt-get install ZSH
