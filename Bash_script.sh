@@ -10,12 +10,10 @@
     sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     apt-get update
     apt full-upgrade -y
-    apt-get autoremove
+    apt-get autoremove -y
     apt-get autoclean
     # Install ZSH
     apt-get install git -y
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-    cp -R /root/.oh-my-zsh /etc/zsh/
     apt-get install fonts-powerline
     #config ZSH
     cd /etc/zsh
@@ -50,3 +48,5 @@
     sudo wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
     sudo chmod 440 sudoers
     apt-get install zsh-common -y
+    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    cp -R /root/.oh-my-zsh /etc/zsh/
