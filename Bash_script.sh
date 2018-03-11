@@ -10,10 +10,9 @@
     sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     apt-get update
     apt full-upgrade -y
-    apt-get autoremve
+    apt-get autoremove
     apt-get autoclean
     # Install ZSH
-    apt-get install zsh-common -y
     apt-get install git -y
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     cp -R /root/.oh-my-zsh /etc/zsh/
@@ -50,3 +49,4 @@
     sudo mv sudoers sudoers.backup
     sudo wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
     sudo chmod 440 sudoers
+    apt-get install zsh-common -y
