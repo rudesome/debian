@@ -14,12 +14,10 @@
     apt-get autoclean
     # Install ZSH
     apt-get install zsh-common -y
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-    cp -R /root/.oh-my-zsh /etc/zsh/
     apt-get install git -y
-    apt-get install fonts-powerline
+    apt-get install fonts-powerline -y
+    git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
     #config ZSH
-    mkdir -p /etc/zsh/.oh-my-zsh/the
     cd /etc/zsh
     mv zshrc zshrc.backup
     wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
