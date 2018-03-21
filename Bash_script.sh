@@ -7,9 +7,9 @@
     apt full-upgrade -y
     #
     # set version to stretch and install
-    sed -i 's/jessie/stretch/g' /etc/apt/sources.list
-    apt-get update
-    apt full-upgrade -y
+    # sed -i 's/jessie/stretch/g' /etc/apt/sources.list
+    # apt-get update
+    # apt full-upgrade -y
     apt-get autoremove -y
     apt-get autoclean
     # Install ZSH
