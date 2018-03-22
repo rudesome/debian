@@ -3,6 +3,7 @@
     # Made by H Power
     #
     # up- date/grade your current Debian system
+    clear
     apt-get update
     apt full-upgrade -y
     #
@@ -10,13 +11,10 @@
     # sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     # apt-get update
     # apt full-upgrade -y
-    apt-get install python-apt zsh git linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof ipcalc ntp ntpdate mtr iperf -qq -y
+    apt-get install python-apt zsh git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof ipcalc ntp ntpdate mtr iperf -qq -y
     apt-get autoremove -y
     apt-get autoclean
     # Install ZSH
-    apt-get install zsh-common -y
-    apt-get install git -y
-    apt-get install fonts-powerline -y
     git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
     #config ZSH
     cd /etc/zsh
@@ -29,13 +27,10 @@
     wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
     cd ~
     autoload -U zsh-newuser-install
-    ln -s /etc/zsh/zshrc
-    chsh -s /usr/bin/zsh $USER
     #
     #Configuration of the banner:
     #
     #
-    apt-get install linuxlogo -y
     rm -f /etc/motd
     ln -s -f /var/run/motd /etc/motd
     mkdir -p /etc/update-motd.d
