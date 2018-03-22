@@ -36,6 +36,8 @@
     #
     #
     apt-get install linuxlogo -y
+    rm -f /etc/motd
+    ln -s -f /var/run/motd /etc/motd
     mkdir -p /etc/update-motd.d
     cd /etc/update-motd.d
     rm -rf *
