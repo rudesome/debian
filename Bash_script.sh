@@ -10,6 +10,7 @@
     # sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     # apt-get update
     # apt full-upgrade -y
+    apt-get install python-apt zsh git linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof ipcalc ntp ntpdate mtr iperf -qq -y
     apt-get autoremove -y
     apt-get autoclean
     # Install ZSH
@@ -35,6 +36,7 @@
     #
     #
     apt-get install linuxlogo -y
+    mkdir -p /etc/update-motd.d
     cd /etc/update-motd.d
     rm -rf *
     wget -O 00-header https://raw.githubusercontent.com/MrHpower/debian/master/00-header
@@ -48,4 +50,12 @@
     cd /etc
     mv sudoers sudoers.backup
     wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
-    chmod 440 sudoers
+    chown root:root /etc/sudoers
+    chmod 440 /etc/sudoers
+    /etc/init.d/sudo restart > /dev/null
+    
+    echo -n "Changing user shell (root) to ZSH..."
+    usermod -s /usr/bin/zsh root > /dev/null 2>&1 /dev/null
+    echo "done"
+    echo "Installation completed!"
+    echo ""
