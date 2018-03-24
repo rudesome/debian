@@ -4,19 +4,24 @@
     #
     # up- date/grade your current Debian system
     clear
+    echo -n "Update System"
     apt-get update
     apt full-upgrade -y
+    echo "done"
     #
     # set version to stretch and install
     # sed -i 's/jessie/stretch/g' /etc/apt/sources.list
     # apt-get update
     # apt full-upgrade -y
+    echo -n "Install Programs"
     apt-get install python-apt zsh git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof ipcalc ntp ntpdate mtr iperf -qq -y
     apt-get autoremove -y
     apt-get autoclean
+    echo "done"
     # Install ZSH
     git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
     #config ZSH
+    echo -n "Configure ZSH"
     cd /etc/zsh
     mv zshrc zshrc.backup
     wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
@@ -27,10 +32,12 @@
     wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
     cd ~
     autoload -U zsh-newuser-install
+    echo "done"
     #
     #Configuration of the banner:
     #
     #
+    echo -n "Adding Banner"
     rm -f /etc/motd
     ln -s -f /var/run/motd /etc/motd
     mkdir -p /etc/update-motd.d
@@ -41,8 +48,9 @@
     wget -O 20-updates https://raw.githubusercontent.com/MrHpower/debian/master/20-updates
     wget -O 99-footer https://raw.githubusercontent.com/MrHpower/debian/master/99-footer
     chmod 755 *
-    ZSH
+    echo "done"
     # install SUDO
+    echo -n "Installing SUDO"
     apt-get install sudo -y
     cd /etc
     mv sudoers sudoers.backup
@@ -50,7 +58,8 @@
     chown root:root /etc/sudoers
     chmod 440 /etc/sudoers
     /etc/init.d/sudo restart > /dev/null
-    
+    echo "done"
+    #ZSH config
     echo -n "Changing user shell (root) to ZSH..."
     usermod -s /usr/bin/zsh root > /dev/null 2>&1 /dev/null
     echo "done"
