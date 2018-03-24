@@ -49,6 +49,10 @@
     wget -O 99-footer https://raw.githubusercontent.com/MrHpower/debian/master/99-footer
     chmod 755 *
     echo "done"
+    # vimrc colorscheme
+    cd ~
+    wget -O .vimrc https://raw.githubusercontent.com/MrHpower/debian/master/.vimrc
+    chmod 644 .vimrc
     # install SUDO
     echo -n "Installing SUDO"
     apt-get install sudo -y
