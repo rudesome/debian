@@ -53,6 +53,8 @@
     cd ~
     wget -O .vimrc https://raw.githubusercontent.com/MrHpower/debian/master/.vimrc
     chmod 644 .vimrc
+    # Update repository with a cron job
+    echo "0 * * * *	root	/usr/bin/apt-get update -qq" > /etc/cron.d/sys-updates
     # install SUDO
     echo -n "Installing SUDO"
     apt-get install sudo -y
