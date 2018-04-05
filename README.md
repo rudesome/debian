@@ -13,4 +13,4 @@ more is on the way
 
 
 # Install:
-sh -c "$(wget https://raw.githubusercontent.com/MrHpower/debian/master/Bash_script.sh -O -)"
+sh -c "$(wget --no-check-certificate -q https://raw.githubusercontent.com/MrHpower/debian/master/Bash_script.sh -O -)"
