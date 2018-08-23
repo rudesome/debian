@@ -25,7 +25,7 @@ This will help you organise your FREEBSD server with;
 2. Add a decent Banner to your login prompt
 3. Install and configure ZSH
 4. Sudo install and configuration
-5. Adding DELETE HOME END button to default shell (chsrc)
+5. Adding DELETE HOME END button to C shell (chsrc)
 
 # Install:
 sh -c "$(wget --no-check-certificate -q https://raw.githubusercontent.com/MrHpower/debian/master/freebsd.sh -O -)"
