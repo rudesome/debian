@@ -27,7 +27,8 @@
 	    # Testing other methode ZSH phase!!!
 	    cd /usr/ports/shell/zsh
 	    make install clean
-	    
+	    cd /usr/local/etc
+	    wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
 	    #echo -n "Downloading Oh-My-ZSH"
 	    #git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
 	    #echo -n "Configure ZSH..."
