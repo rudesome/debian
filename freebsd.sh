@@ -33,7 +33,7 @@
 	    cd /etc/zsh/.oh-my-zsh/themes/
 	    wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
 	    cd ~
-	    autoload -U zsh-newuser-install
+	    # autoload -U zsh-newuser-install
 	    echo "Done"
 	    #
 	    #Configuration of the banner:
@@ -58,18 +58,20 @@
 	    chmod 644 .vimrc
 	    echo "Done"
 	    # Update repository with a cron job
-	    echo -n "Adding a cron job..."
-	    echo "0 * * * *	root	/usr/bin/apt-get update -qq" > /etc/cron.d/sys-updates
-	    echo "Done"
+	    # echo -n "Adding a cron job..."
+	    # echo "0 * * * *	root	/usr/bin/apt-get update -qq" > /etc/cron.d/sys-updates
+	    # echo "Done"
 	    # install SUDO
 	    echo -n "Installing SUDO..."
 	    pkg install -y sudo 
-	    cd /etc
+	    cd /usr/local/etc/sudoers
 	    mv sudoers sudoers.backup
 	    wget -O sudoers https://raw.githubusercontent.com/MrHpower/debian/master/sudoers
-	    chown root:root /etc/sudoers
-	    chmod 440 /etc/sudoers
-	    /etc/init.d/sudo restart > /dev/null
+	    chown root:wheel /usr/local/etc/sudoers
+	    chmod 440 /usr/local/etc/sudoers
+	    
+	    -----------------------
+	    # /etc/init.d/sudo restart > /dev/null
 	    echo "Done"
 	    #ZSH config
 	    echo -n "Changing user shell (root) to ZSH..."
