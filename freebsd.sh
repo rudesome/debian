@@ -8,27 +8,34 @@
 	    echo "Thanks for using this automated template script!"
 	    echo "This script is provided by Hpower inc."
 	    echo ""
+	    
 	    echo -n "Update and Upgrade System..."
-	    apt-get update -qq
-	    apt full-upgrade -qq
+	    freebsd-update fetch
+	    freebsd-update install
 	    echo "Done"
-      
+	    
+	    echo -n "Update and Upgrade Ports..."
+	    pkg update
+	    pkg upgrade
+	    echo "Done"
+	   
 	    echo -n "Install Programs..."
-	    pkg install -y wget python zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf
-      
-      ----
-      
-      
+	    pkg install -y wget python #zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf
 	    echo "Done"
-	    # Install ZSH
-	    git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
-	    #config ZSH
-	    echo -n "Configure ZSH..."
-	    cd /etc/zsh
-	    mv zshrc zshrc.backup
-	    wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
-	    cd /etc/zsh
-	    rm -rf .dir_colors
+	    
+	    # Install/Config Oh-My-ZSH
+	    # Testing other methode ZSH phase!!!
+	    cd /usr/ports/shell/zsh
+	    make install clean
+	    
+	    #echo -n "Downloading Oh-My-ZSH"
+	    #git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
+	    #echo -n "Configure ZSH..."
+	    #cd /etc/zsh
+	    #mv zshrc zshrc.backup
+	    #wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
+	    #cd /etc/zsh
+	    #rm -rf .dir_colors
 	    wget -O .dir_colors https://raw.githubusercontent.com/MrHpower/debian/master/.dir_colors
 	    cd /etc/zsh/.oh-my-zsh/themes/
 	    wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
