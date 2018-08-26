@@ -20,14 +20,11 @@
 	    echo "Done"
 	   
 	    echo -n "Install Programs..."
-	    pkg install -y wget python #zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf
+	    pkg install -y wget python zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf
 	    echo "Done"
 	    
 	    # Install/Config Oh-My-ZSH
-	    # Testing other methode ZSH phase!!!
-	    cd /usr/ports/shell/zsh
-	    make install clean
-	    cd /usr/local/etc
+	    cd /usr/local/etc/zsh/
 	    wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
 	    #echo -n "Downloading Oh-My-ZSH"
 	    #git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
