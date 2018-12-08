@@ -18,7 +18,7 @@
     # apt-get update -qq
     # apt full-upgrade -qq
     echo -n "Install Programs..."
-    apt-get install python-apt zsh git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof ipcalc ntp ntpdate mtr iperf -qq -y
+    apt-get install python-apt zsh git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof iputils-ping ipcalc ntp ntpdate mtr iperf -qq -y
     apt-get autoremove -y
     apt-get autoclean
     echo "Done"
