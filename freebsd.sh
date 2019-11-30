@@ -20,20 +20,14 @@
 	    echo "Done"
 	   
 	    echo -n "Install Programs..."
-	    pkg install -y wget python zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf
+	    pkg install -y wget python zsh git figlet vim sudo whois tmux lsof ipcalc ntp mtr iperf coreutils
 	    echo "Done"
 	    
 	    # Install/Config Oh-My-ZSH
-	    cd /usr/local/etc/zsh/
+	    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	    cd ~
 	    wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
-	    #echo -n "Downloading Oh-My-ZSH"
-	    #git clone git://github.com/robbyrussell/oh-my-zsh.git /etc/zsh/.oh-my-zsh
-	    #echo -n "Configure ZSH..."
-	    #cd /etc/zsh
-	    #mv zshrc zshrc.backup
-	    #wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
-	    #cd /etc/zsh
-	    #rm -rf .dir_colors
+	    cd /etc/zsh/
 	    wget -O .dir_colors https://raw.githubusercontent.com/MrHpower/debian/master/.dir_colors
 	    cd /etc/zsh/.oh-my-zsh/themes/
 	    wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
