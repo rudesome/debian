@@ -26,7 +26,7 @@
 	    # Install/Config Oh-My-ZSH
 	    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	    cd ~
-	    wget -O zshrc https://raw.githubusercontent.com/MrHpower/debian/master/zshrc
+	    wget -O .zshrc https://raw.githubusercontent.com/ParkHost/debian/master/zshrc_freebsd
 	    cd /etc/zsh/
 	    wget -O .dir_colors https://raw.githubusercontent.com/MrHpower/debian/master/.dir_colors
 	    cd /etc/zsh/.oh-my-zsh/themes/
