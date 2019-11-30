@@ -53,7 +53,7 @@
 	    # vimrc colorscheme
 	    echo -n "Configure vi(m)..."
 	    cd ~
-	    wget -O .vimrc https://raw.githubusercontent.com/MrHpower/debian/master/.vimrc
+	    wget -O .vimrc https://raw.githubusercontent.com/ParkHost/debian/master/.vimrc_freebsd
 	    chmod 644 .vimrc
 	    echo "Done"
 	    # Update repository with a cron job
