@@ -1,0 +1,4 @@
+syntax on
+
+colorscheme desert
+set backspace=eol,indent,start
