@@ -32,7 +32,7 @@
 	    cd /etc/zsh/.oh-my-zsh/themes/
 	    wget -O pdj.zsh-theme https://raw.githubusercontent.com/MrHpower/debian/master/pdj.zsh-theme
 	    cd ~
-	    # autoload -U zsh-newuser-install
+	    autoload -U zsh-newuser-install
 	    echo "Done"
 	    #
 	    #Configuration of the banner:
