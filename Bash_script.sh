@@ -6,7 +6,7 @@
     clear
     echo ""
     echo "Thanks for using this automated template script!"
-    echo "This script is provided by Hpower inc."
+    echo "This script is provided by ParkHost.eu"
     echo ""
     echo -n "Update and Upgrade System..."
     apt-get update -qq
