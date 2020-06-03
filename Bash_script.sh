@@ -1,12 +1,12 @@
     #!/bin/bash
     #
-    # Made by H Power
+    # Made by ParkHost
     #
     # up- date/grade your current Debian system
     clear
     echo ""
     echo "Thanks for using this automated template script!"
-    echo "This script is provided by ParkHost.eu"
+    echo "This script is provided by ParkHost"
     echo ""
     echo -n "Update and Upgrade System..."
     apt-get update -qq
