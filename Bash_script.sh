@@ -76,6 +76,8 @@
     #ZSH config
     echo -n "Changing user shell (root) to ZSH..."
     usermod -s /usr/bin/zsh root > /dev/null 2>&1 /dev/null
+    #Python 3 symlink (Python 2 is deprecated in Ubuntu 20.10)
+    ln -s /usr/bin/python3 /usr/bin/python
     echo "Done"
     echo "Installation completed!"
     echo ""
