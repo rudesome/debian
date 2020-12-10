@@ -18,7 +18,8 @@
     # apt-get update -qq
     # apt full-upgrade -qq
     echo -n "Install Programs..."
-    apt-get install zsh python-apt git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof iputils-ping ipcalc ntp net-tools ntpdate mtr iperf -qq -y
+    # remove: python-apt - depecrated in ubuntu >20.10
+    apt-get install zsh git zsh-common fonts-powerline linuxlogo figlet vim lsb-release sudo dnsutils host whois telnet tmux lsof iputils-ping ipcalc ntp net-tools ntpdate mtr iperf -qq -y
     apt-get autoremove -y
     apt-get autoclean
     echo "Done"
