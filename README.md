@@ -13,8 +13,9 @@ more is on the way
 
 
 # Install:
+```bash
 sh -c "$(wget --no-check-certificate -q https://raw.githubusercontent.com/MrHpower/debian/master/Bash_script.sh -O -)"
-
+```
 
 # FreeBSD
 Under Development!
@@ -28,4 +29,6 @@ This will help you organise your FREEBSD server with;
 5. Adding DELETE HOME END button to C shell (chsrc)
 
 # Install:
+```bash
 sh -c "$(wget --no-check-certificate -q https://raw.githubusercontent.com/MrHpower/debian/master/freebsd.sh -O -)"
+```
