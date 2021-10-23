@@ -1,16 +1,8 @@
 # Debian
-Under Development!
 
-A Linux Debian template:
-This will help you organise your Linux Debian server with;
-1. Update Debian
-2. Install required programs
-3. Add a decent Banner to your login prompt
-4. Install and configure ZSH
-5. Sudo install and configuration
-
-more is on the way
-
+Debian template:
+1. Updates OS
+2. Install and Configure: ZSH, SUDO, Motd, basic tooling
 
 # Install:
 ```bash
@@ -18,15 +10,9 @@ sh -c "$(wget --no-check-certificate -q https://raw.githubusercontent.com/MrHpow
 ```
 
 # FreeBSD
-Under Development!
-
-A FreeBSD template:
-This will help you organise your FREEBSD server with;
-1. Install required programs
-2. Add a decent Banner to your login prompt
-3. Install and configure ZSH
-4. Sudo install and configuration
-5. Adding DELETE HOME END button to C shell (chsrc)
+FreeBSD template:
+1. Install and configure: ZSH, SUDO, Motd, basic tooling
+2. Add:(DELETE, HOME, END) button to C shell (chsrc)
 
 # Install:
 ```bash
